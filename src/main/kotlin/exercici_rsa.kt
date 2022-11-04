@@ -16,8 +16,7 @@ fun main() {
         while (true) {
 
 
-
-            println("que vols desxifrar un missatge (1) encriptar-ne un(2) is vols fer couet d'aquí --> (3)")
+            println("que vols desxifrar un missatge (1) encriptar-ne un(2) is vols fer couet d'aquí --> (3) i si vols encripar el missatge d'un company--> (4)")
             val eleccio = readLine()?.toIntOrNull() ?: 0
             if (eleccio == 1) {
                 println("Posa  el missatge encriptat")
@@ -30,9 +29,17 @@ fun main() {
                 val missatge = readLine().toString()
                 val nosequeposar = encrypt(missatge, claupublica)
                 println(nosequeposar)
-            }else if (eleccio == 3){
+            } else if (eleccio == 3) {
                 break
-            }else if (eleccio != 1 || eleccio != 2 || eleccio != 3){
+            }else if (eleccio == 4){
+                println("inserta clau pública del company:")
+                val clavepubli = readLine().toString()
+                println("inserta el missatge que vols encriptar")
+                val missatget = readLine().toString()
+                val quetalnosequeposar = encrypt(missatget, clavepubli)
+                print(quetalnosequeposar)
+
+            }else if (eleccio != 1 || eleccio != 2 || eleccio != 3 || eleccio != 4){
                 continue
             }
 
