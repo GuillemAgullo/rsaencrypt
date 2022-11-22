@@ -41,7 +41,7 @@ fun main() {
             }else if (eleccio == 5){
                     println(claupublica)
 
-            } else if (eleccio != 1 || eleccio != 2 || eleccio != 3 || eleccio != 4 || eleccio != 5){
+            } else if (eleccio != 1 && eleccio != 2 && eleccio != 3 && eleccio != 4 && eleccio != 5){
                 continue
             }
 
